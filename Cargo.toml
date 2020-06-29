@@ -1,0 +1,23 @@
+[package]
+name = "logtest"
+version = "1.0.0"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yoshuawuyts/logtest"
+documentation = "https://docs.rs/logtest"
+description = "Test and assert log statements"
+readme = "README.md"
+edition = "2018"
+keywords = []
+categories = []
+authors = [
+    "Yoshua Wuyts <yoshuawuyts@gmail.com>"
+]
+
+[features]
+
+[dependencies]
+log = { version = "0.4.8", features = ["kv_unstable"] }
+lazy_static = "1.4.0"
+
+[dev-dependencies]
+kv-log-macro = "1.0.6"
