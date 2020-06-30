@@ -1,4 +1,4 @@
-<h1 align="center">log-test</h1>
+<h1 align="center">logtest</h1>
 <div align="center">
   <strong>
     Test and assert log statements
@@ -9,17 +9,17 @@
 
 <div align="center">
   <!-- Crates version -->
-  <a href="https://crates.io/crates/log-test">
-    <img src="https://img.shields.io/crates/v/log-test.svg?style=flat-square"
+  <a href="https://crates.io/crates/logtest">
+    <img src="https://img.shields.io/crates/v/logtest.svg?style=flat-square"
     alt="Crates.io version" />
   </a>
   <!-- Downloads -->
-  <a href="https://crates.io/crates/log-test">
-    <img src="https://img.shields.io/crates/d/log-test.svg?style=flat-square"
+  <a href="https://crates.io/crates/logtest">
+    <img src="https://img.shields.io/crates/d/logtest.svg?style=flat-square"
       alt="Download" />
   </a>
   <!-- docs.rs docs -->
-  <a href="https://docs.rs/log-test">
+  <a href="https://docs.rs/logtest">
     <img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square"
       alt="docs.rs docs" />
   </a>
@@ -27,15 +27,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://docs.rs/log-test">
+    <a href="https://docs.rs/logtest">
       API Docs
     </a>
     <span> | </span>
-    <a href="https://github.com/yoshuawuyts/log-test/releases">
+    <a href="https://github.com/yoshuawuyts/logtest/releases">
       Releases
     </a>
     <span> | </span>
-    <a href="https://github.com/yoshuawuyts/log-test/blob/master.github/CONTRIBUTING.md">
+    <a href="https://github.com/yoshuawuyts/logtest/blob/master.github/CONTRIBUTING.md">
       Contributing
     </a>
   </h3>
@@ -43,7 +43,7 @@
 
 ## Installation
 ```sh
-$ cargo add log-test
+$ cargo add logtest
 ```
 
 ## Safety
@@ -57,9 +57,9 @@ look at some of these issues:
 - [Issues labeled "good first issue"][good-first-issue]
 - [Issues labeled "help wanted"][help-wanted]
 
-[contributing]: https://github.com/yoshuawuyts/log-test/blob/master.github/CONTRIBUTING.md
-[good-first-issue]: https://github.com/yoshuawuyts/log-test/labels/good%20first%20issue
-[help-wanted]: https://github.com/yoshuawuyts/log-test/labels/help%20wanted
+[contributing]: https://github.com/yoshuawuyts/logtest/blob/master.github/CONTRIBUTING.md
+[good-first-issue]: https://github.com/yoshuawuyts/logtest/labels/good%20first%20issue
+[help-wanted]: https://github.com/yoshuawuyts/logtest/labels/help%20wanted
 
 ## License
 

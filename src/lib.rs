@@ -32,8 +32,8 @@
 //! log::info!("world");
 //!
 //! // The messages are now available from the logger.
-//! assert_eq!(logger.pop_front().unwrap().args(), "hello");
-//! assert_eq!(logger.pop_front().unwrap().args(), "world");
+//! assert_eq!(logger.pop().unwrap().args(), "hello");
+//! assert_eq!(logger.pop().unwrap().args(), "world");
 //! ```
 
 #![forbid(unsafe_code, future_incompatible, rust_2018_idioms)]
@@ -43,6 +43,7 @@
 use lazy_static::lazy_static;
 use log::{kv, Level, LevelFilter, Metadata};
 use std::collections::{HashMap, VecDeque};
+use std::iter::Iterator;
 use std::sync::Mutex;
 
 /// The "payload" of a log message.
@@ -139,14 +140,8 @@ impl Logger {
 
     /// Pop an event from the front of the event queue.
     #[must_use]
-    pub fn pop_front(&mut self) -> Option<Record> {
+    pub fn pop(&mut self) -> Option<Record> {
         EVENTS.lock().unwrap().pop_front()
-    }
-
-    /// Pop an event from the back of the event queue.
-    #[must_use]
-    pub fn pop_back(&mut self) -> Option<Record> {
-        EVENTS.lock().unwrap().pop_back()
     }
 
     /// Returns the number of elements in the `Logger`.
@@ -163,4 +158,11 @@ impl Logger {
 /// Create a new instance of `Logger` and start listening for events.
 pub fn start() -> Logger {
     Logger::start()
+}
+
+impl Iterator for Logger {
+    type Item = Record;
+    fn next(&mut self) -> Option<Self::Item> {
+        self.pop()
+    }
 }
